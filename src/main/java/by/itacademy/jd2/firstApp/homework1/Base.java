@@ -38,6 +38,16 @@ public class Base {
                     return false;
                 }
             }
+            if (entry.getKey().equalsIgnoreCase("artist")) {
+                if (entry.getValue() == null) {
+                    return false;
+                }
+            }
+            if (entry.getKey().equalsIgnoreCase("about")) {
+                if (entry.getValue()[0].isEmpty()) {
+                    return false;
+                }
+            }
         }
 
         for (Map.Entry<String, String[]> entry : entrySet) {
